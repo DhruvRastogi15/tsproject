@@ -1,19 +1,16 @@
-// function add(n1: number, n2: number) {
-//     console.log(n1 + n2)
-//     return n1 + n2;
-// }
-// function printResult(num: number): void {
-//     console.log('Result :' + num);
-// }
-function addAndHandle(n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
+var userInput; //or any
+var userName;
+userInput = 5;
+userInput = 'Dhruv';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-addAndHandle(10, 20, function (result) {
-    console.log(result);
-});
-// printResult(add(1, 2));
-// let combineValues: (a: number, b: number) => number;
-// combineValues = add;
-// combineValues = printResult;
-// combineValues(8, 8)
+// Unknown is a better option to use instead of any.
+// We just need to do a type check and there won't be any run time errors.
+// Utility function that generates error and shows them.
+// This function never produces a return value 
+function generateErrors(message, code) {
+    throw { message: message, errorCode: code };
+}
+var result = generateErrors('An error occured', 401);
+console.log(result);
